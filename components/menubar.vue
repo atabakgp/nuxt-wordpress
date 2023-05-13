@@ -1,6 +1,6 @@
 <template>
   <ul class="flex">
-    <li v-for="item in menuItems" :key="item.ID" class="mr-6 text-lg">
+    <li v-for="item in menuItems" :key="item.ID" class="mr-6 text-xl">
       <NuxtLink :to="item.url">
         {{ item.title }}
       </NuxtLink>
@@ -23,6 +23,6 @@ const menuItems = ref(menu.value?.items);
   
 <style lang="scss" scoped>
 .child-menu {
-  display: none;
+  // display: none;
 }
 </style>

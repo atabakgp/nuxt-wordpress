@@ -1,5 +1,6 @@
 import { IRenderedPage } from "@/interfaces/pages";
-import { IMenu, IMenuItem, IChildItem } from "@/interfaces/menu";
+import { IMenu } from "@/interfaces/menu";
+import { ISliderItem, ISliderMedia } from "@/interfaces/slider";
 
 export default () => {
   const config = useRuntimeConfig();
@@ -7,6 +8,15 @@ export default () => {
 
   const getMainMenu = async () => {
     return useFetch<IMenu>(`${wpUri}/menus/v1/menus/main-menu`);
+  }
+
+  const getSliderItems = async () => {
+    return useFetch<ISliderItem>(`${wpUri}/wp/v2/projects-slider`);
+
+  }
+
+  const getSliderMedia = async(featured_media: number) => {
+    return useFetch<ISliderMedia>(`${wpUri}/wp/v2/media/${featured_media}`);
   }
 
   // Get All Pages
@@ -40,7 +50,9 @@ export default () => {
   // const getSingleCategory = async (slug: string) => (`categories?slug=${slug}`);
 
   return {
-    getMainMenu
+    getMainMenu,
+    getSliderItems,
+    getSliderMedia
   }
 
 }
