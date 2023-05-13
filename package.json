@@ -9,11 +9,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@types/node": "^18",
+    "@nuxtjs/tailwindcss": "^6.6.8",
+    "@types/node": "^18.16.8",
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "primeicons": "^6.0.1",
-    "primevue": "^3.29.0"
+    "sass": "^1.62.1"
   }
 }

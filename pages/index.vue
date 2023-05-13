@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1>
-      index file
-    </h1>
+    <Header />
   </div>
 </template>
 
